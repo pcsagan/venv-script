@@ -4,7 +4,7 @@
 
 ## What is it?
 
-A simple script for dealing with the following typical situation:
+A simple bash shell script for dealing with the following typical situation:
 ```
 python -m venv venv
 source venv/scripts/activate
