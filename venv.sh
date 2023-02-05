@@ -11,7 +11,6 @@ script=`basename ${BASH_SOURCE[0]}`
 pwd=`pwd`
 venv_command="venv" # can be "venv" or "virtualenv" but the latter has been deprecated since python 3.8
 env_dir="venv"
-exec_dir="scripts"  # can be "scripts" for windows and "bin" for linux
 recreate_env=false
 install_deps=false
 install_dev_deps=false
@@ -88,8 +87,15 @@ function create_or_recreate() {
 }
 
 function activate () {
-    # execute the virtual environment activation script
-    . $pwd/$env_dir/$exec_dir/activate
+    # if we're on windows...
+    if [ -f "$pwd/$env_dir/scripts/activate" ]; then
+        . "$pwd/$env_dir/scripts/activate"
+    # if we're on linux...
+    elif [ -f "$pwd/$env_dir/bin/activate" ]; then
+        . "$pwd/$env_dir/bin/activate"
+    else
+        print "${C_R}error: could not locate virtual environment activation script${C_X}"
+    fi
 }
 
 function install_dependencies() {
