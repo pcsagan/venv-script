@@ -23,9 +23,9 @@ The script is executed using the command `source venv.sh`
 
 ### Aliasing venv.sh
 
-The script can be aliased with `alias venv="source venv.sh"`
+The script can be aliased with the bash command `alias venv="source venv.sh"`
 
-The alias can be made permanent by adding it to your `.bashrc` file. To reference the script in your user directory, use
+The alias can be made permanent by adding it to your `.bashrc` file. To reference the script in your user directory use
 ```shell
 alias venv="source ~/venv.sh"
 ```
@@ -34,13 +34,16 @@ Now the command `venv` can be used in place of `source venv.sh`
 
 ## Examples
 
+The examples below show how to invoke the script, as well as how to do the equivalent work on the command line.
+
+### Using the source command
+
 `source venv.sh`
 ```
 python -m venv venv
 source venv/scripts/activate
 pip install -r requirements.txt
 ```
-
 
 `source venv.sh -n "testing" -d`
 ```
