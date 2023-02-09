@@ -1,6 +1,11 @@
-<p align="center">
-  <img src="https://i.imgur.com/PHgnvJV.png" title="source venv.sh">
-</p>
+<div align="center">
+
+<img src="https://i.imgur.com/PHgnvJV.png" title="source venv.sh">
+
+[![Tests: Passing](https://img.shields.io/badge/Tests-Passing-forestgreen.svg)](https://github.com/pcsagan/tethys/blob/main/tox.ini)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/pcsagan/tethys/blob/main/LICENSE)
+
+</div>
 
 ## What is it?
 
